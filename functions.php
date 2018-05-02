@@ -27,3 +27,6 @@
 
 // Theme Setup
 add_action( 'wp_enqueue_scripts' , 'phantom_enqueue_assets' );
+
+// Theme support
+add_theme_support( 'post-thumbnails' );
