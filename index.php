@@ -19,25 +19,30 @@
 					<div id="main">
 						<div class="inner">
 							<header>
-								<h1>Erat ut Sapien, mus curae, morbi dictum duis<br />
-								aenean auctor at Dictum.</h1>
-								<p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore.</p>
+								<h1><?php echo bloginfo( 'name' ); ?></h1>
+								<p><?php echo bloginfo( 'description' ); ?></p>
 							</header>
 							<section class="tiles">
-								<article class="style1">
-									<span class="image">
-										<!-- <img src="images/pic01.jpg" alt="" /> -->
-									</span>
-									<a href="generic.html">
-										<h2>Magna</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
+
+								<?php if (have_posts()) : ?>
+									<?php while (have_posts()) : the_post(); ?>
+										<article id="post-<?php the_ID(); ?>" class="style1">
+											<span class="image">
+												<img src="<?php echo the_post_thumbnail_url(); ?>" alt="" />
+											</span>
+											<a href="<?php the_permalink(); ?>">
+												<h2><?php the_title(); ?></h2>
+												<div class="content">
+													<p><?php the_excerpt(); ?></p>
+												</div>
+											</a>
+										</article>
+									<?php endwhile; ?>
+								<?php endif; ?>
+
 								<article class="style2">
 									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
+										<img src="http://localhost:8888/grant-site/wp-content/uploads/2018/05/placeholder-image.jpg" alt="" />
 									</span>
 									<a href="generic.html">
 										<h2>Lorem</h2>
@@ -48,7 +53,7 @@
 								</article>
 								<article class="style3">
 									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
+										<img src="http://localhost:8888/grant-site/wp-content/uploads/2018/05/placeholder-image.jpg" alt="" />
 									</span>
 									<a href="generic.html">
 										<h2>Feugiat</h2>
@@ -59,7 +64,7 @@
 								</article>
 								<article class="style4">
 									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
+										<img src="http://localhost:8888/grant-site/wp-content/uploads/2018/05/placeholder-image.jpg" alt="" />
 									</span>
 									<a href="generic.html">
 										<h2>Tempus</h2>
@@ -70,7 +75,7 @@
 								</article>
 								<article class="style5">
 									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
+										<img src="http://localhost:8888/grant-site/wp-content/uploads/2018/05/placeholder-image.jpg" alt="" />
 									</span>
 									<a href="generic.html">
 										<h2>Aliquam</h2>
@@ -81,7 +86,7 @@
 								</article>
 								<article class="style6">
 									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
+										<img src="http://localhost:8888/grant-site/wp-content/uploads/2018/05/placeholder-image.jpg" alt="" />
 									</span>
 									<a href="generic.html">
 										<h2>Veroeros</h2>
@@ -92,7 +97,7 @@
 								</article>
 								<article class="style2">
 									<span class="image">
-										<img src="images/pic07.jpg" alt="" />
+										<img src="http://localhost:8888/grant-site/wp-content/uploads/2018/05/placeholder-image.jpg" alt="" />
 									</span>
 									<a href="generic.html">
 										<h2>Ipsum</h2>
@@ -103,7 +108,7 @@
 								</article>
 								<article class="style3">
 									<span class="image">
-										<img src="images/pic08.jpg" alt="" />
+										<img src="http://localhost:8888/grant-site/wp-content/uploads/2018/05/placeholder-image.jpg" alt="" />
 									</span>
 									<a href="generic.html">
 										<h2>Dolor</h2>
@@ -114,7 +119,7 @@
 								</article>
 								<article class="style1">
 									<span class="image">
-										<img src="images/pic09.jpg" alt="" />
+										<img src="http://localhost:8888/grant-site/wp-content/uploads/2018/05/placeholder-image.jpg" alt="" />
 									</span>
 									<a href="generic.html">
 										<h2>Nullam</h2>
@@ -125,7 +130,7 @@
 								</article>
 								<article class="style5">
 									<span class="image">
-										<img src="images/pic10.jpg" alt="" />
+										<img src="http://localhost:8888/grant-site/wp-content/uploads/2018/05/placeholder-image.jpg" alt="" />
 									</span>
 									<a href="generic.html">
 										<h2>Ultricies</h2>
@@ -136,7 +141,7 @@
 								</article>
 								<article class="style6">
 									<span class="image">
-										<img src="images/pic11.jpg" alt="" />
+										<img src="http://localhost:8888/grant-site/wp-content/uploads/2018/05/placeholder-image.jpg" alt="" />
 									</span>
 									<a href="generic.html">
 										<h2>Dictum</h2>
@@ -147,7 +152,7 @@
 								</article>
 								<article class="style4">
 									<span class="image">
-										<img src="images/pic12.jpg" alt="" />
+										<img src="http://localhost:8888/grant-site/wp-content/uploads/2018/05/placeholder-image.jpg" alt="" />
 									</span>
 									<a href="generic.html">
 										<h2>Pretium</h2>
